@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![geordie-quiroa](https://circleci.com/gh/geordie-quiroa/machine-learning-microservice/tree/main.svg?style=shield)](https://app.circleci.com/pipelines/github/geordie-quiroa/machine-learning-microservice)
 
 ## Project Overview
 
