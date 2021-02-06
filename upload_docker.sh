@@ -5,11 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=gquiroa/operationalize-ml
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+echo "Docker ID and Image: $dockerpath
+docker login --username gquiroa
+docker tag predict_model:udacity-ml gquiroa/operationalize-ml:udacity-ml
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath:udacity-ml
