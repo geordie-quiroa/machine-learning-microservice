@@ -10,8 +10,6 @@ setup:
 	# source ~/.devops/bin/activate
 	python3 -m venv ~/.devops && \
 		source ~/.devops/bin/activate
-	wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-	chmod +x ./hadolint
 
 install:
 	# This should be run from inside a virtualenv
@@ -26,6 +24,8 @@ test:
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
+	wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+	chmod +x ./hadolint
 	./hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
